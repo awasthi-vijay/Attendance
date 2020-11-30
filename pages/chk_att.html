@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Check Attentance</title>
+	<style>
+		body{
+			background-image: url("https://blog.depositphotos.com/wp-content/uploads/2017/07/Soothing-nature-backgrounds-2.jpg");
+		}
+		.main{
+			background-color: rgb(107, 94, 94);
+			height: 460px;
+			width: 300px;
+			border-radius: 30px 30px 30px 30px;
+			padding: 2%;
+			opacity: 0.7;
+		}
+		.check{
+			color: white;
+			overflow-y: scroll;
+			
+		}
+		.message{
+			height: 110px;
+			width: 110px;
+			background-color: rgb(194, 49, 49);
+		}
+		.bigmain{
+			height: 100%;
+			display: flex;
+		}
+		.button {
+			background-color: #c5aa60; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			color: rgb(32, 32, 32);
+			margin: 4px 2px;
+			border-radius: 100px 100px 100px 100px;
+			cursor: pointer;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.7s;
+		}
+		.button2:hover {
+  			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+		.logout{
+				margin-left: 760px;
+		}
+	</style>
+</head>
+<body>
+<h1 align="center" style="color: rgb(48, 46, 46);">
+	Attentance Management System
+</h1>
+<div class="bigmain">
+	<div class="main">
+		<div class="check">
+			{% for i in res %}
+				<a href="chk_present?d={{i.adate}}" style="color: aliceblue;">{{i.adate}}</a><br><br>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="logout">
+		<button id="studentArea" class="button button2"><a href="home" style="text-decoration: none;">
+			Back To Home Page.
+		</a></button>
+	</div>
+</div>
+<!-- <p align="left" style="font-size: large; color: aliceblue;"> In case of any query *please contact your faculty!!</p> -->
+</body>
+</html>
+<div>
+
+</div>

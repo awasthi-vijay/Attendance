@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Faculty LoginPage </title>
+	<style>
+		body{
+			background-image: url("https://blog.depositphotos.com/wp-content/uploads/2017/07/Soothing-nature-backgrounds-2.jpg");
+		}
+		h1{
+				font-family: 'Goldman', cursive;
+				color: rgb(49, 47, 47);
+			}
+		.details{
+			height: 340px;
+			width: 500px;
+			border-radius: 10px 10px 10px 10px;
+			margin-left: 450px;
+			margin-top: 200px;
+			background-color: rgb(241, 177, 124);
+		}
+		input[type=text], [type=password]{
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 3px solid rgb(240, 159, 122);
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
+			outline: none;
+		}
+
+		input[type=text]:focus {
+			border: 3px solid #555;
+		}
+		.login {
+			background-color:  #c5aa60;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			}
+
+			button:hover {
+			opacity: 0.8;
+		}
+				
+</style>
+	
+</head>
+<body>
+
+{% block body %}
+	<div>
+		<h1 align="center">Hello! Faculty Enter Your Credentials.. </h1>
+		<div class="details">
+				<form action="flogin" method="post">
+				{% csrf_token %}
+					<!-- Roll No: <input type="number" name="rollno"><br><br>
+					Password: <input type="password" name="spass"><br><br>
+					--><br>
+					<label for="Your Name" style="font-size: large;">Enter Your Name</label>
+					<input type="text" id="fname" name="fuser" placeholder="Enter your name..." required>
+					<label for="password"style="font-size: large;">Enter Your Password</label>
+					<input type="password" id="lname" name="fpass"  placeholder="Enter your password..." required>
+					<input type="submit" class="login" value="Login"> 
+				</form>
+				<a href="/"><input type="button" class="login" value="Back To Home."></a> <br><br>
+				{{error}}
+		</div>
+	</div>
+{% endblock body %} 
+	
+</body>
+</html>

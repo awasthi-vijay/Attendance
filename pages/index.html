@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	<title>Home</title>
+
+
+<style>
+body{
+		background-image: url("https://blog.depositphotos.com/wp-content/uploads/2017/07/Soothing-nature-backgrounds-2.jpg");
+		
+	}
+.main{
+	height: 100px;
+	/* background-color:#515751; */
+	margin-top: 7%;
+	display: flex;
+}
+.faculty{
+	margin-left:870px;
+	
+}
+.student{
+	margin-left:50px;
+	text-decoration: none;
+	
+}
+.button {
+  background-color: #c5aa60; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: rgb(32, 32, 32);
+  margin: 4px 2px;
+  border-radius: 100px 100px 100px 100px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.7s;
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+	<!-- <div style="text-align:center">
+		<a href="faculty"><h3>Faculty Section</h3></a>
+		<a href="student"><h3>Student Section</h3></a>
+	</div> -->
+
+
+	<!--student section-->
+<div class="main">
+	<div class="student">
+		<button id="studentArea" class="button button2"><a href="student" style="text-decoration: none;">
+			Student Click Here
+		</a></button>
+	</div>
+	
+	<!--faculty section-->
+
+	<div class="faculty">
+		<button id="facultyArea" class="button button2"><a href="faculty"style="text-decoration: none;">
+			Faculty Click Here
+		</a></button>
+	</div>
+</div>
+
+{% endblock body %}
+
+
+<!-- footer section -->
+!-- footer -->
+<!-- <section class="footer" id="con">
+    <footer class="footer-one">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4 class="white-text">Contact Us</h4>
+                    <p class="white-text">
+                        Address:Kanpur,India
+                    </p>
+                    <p class="white-text">
+                        MoBNo:+91 9026482050
+                    </p>
+                </div>
+                <div class="col l6 s12">
+                    <h4 class="white-text">Social Media
+                    </h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/yash.srivastava.106902" class="white-text">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/yashsri.16/" class="white-text">Instagram</a></li>
+                        <li><a href="https://twitter.com/yashsri07823533" class="white-text">Twitter</a></li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+            
+        </div>
+        <div class="row footer-two">
+            <div class="col l6 s12">
+                <p class="white-text">
+                    (&copy;)Copyright 2020 TheCreator.All Rights Reserved.
+                </p>
+            </div>
+            <div class="col l6 s12">
+                <p class="white-text">Developed by Yashu{TheDarkHorse}</p>
+                
+            </div>
+        </div>
+    </footer>
+</section> -->
+    
+</body>
+<!-- jqueary -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+ <!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- js file -->
+<script src="main.js/loader.js"></script>
+</html>
